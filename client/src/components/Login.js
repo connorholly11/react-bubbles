@@ -16,7 +16,6 @@ const Login = props => {
     axiosWithAuth()
       .post('/login', form)
       .then(res => {
-        console.log(res)
         localStorage.setItem('token', res.data.payload)
 
         props.history.push('/bubblepage')
