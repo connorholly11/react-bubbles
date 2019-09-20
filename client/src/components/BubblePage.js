@@ -21,7 +21,7 @@ const BubblePage = () => {
           console.log(err)
         })
       // getColors()
-  })
+  }, [])
 
   
     
