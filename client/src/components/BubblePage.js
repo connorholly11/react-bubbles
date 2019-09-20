@@ -25,6 +25,7 @@ const BubblePage = () => {
         .get('/colors')
         .then(res => {
           console.log(res.data)
+          setColorList(res.data)
         })
         .catch(err => {
           console.log(err)
@@ -38,14 +39,14 @@ const BubblePage = () => {
 
   return (
     <>
-      {/* {getColors.map(color => {
+      {colorList.map(color => {
         console.log('color', color)
         return (
           <div>
             <p>{color.color}</p>
           </div>
         )
-      })} */}
+      })}
       <ColorList colors={colorList} updateColors={setColorList} />
       <Bubbles colors={colorList} />
     </>
